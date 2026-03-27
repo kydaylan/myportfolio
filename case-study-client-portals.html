@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: WordPress Multisite Client Portals — Kyle France</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+    <a href="index.html" class="nav-logo">Kyle<span>.</span></a>
+    <a href="index.html" class="nav-back">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 3L5 8l5 5"/></svg>
+        Back to portfolio
+    </a>
+</nav>
+
+<div class="hero-case"><div class="hero-case-inner">
+    <span class="label">Case Study — WordPress Multisite</span>
+    <h1>B2B Client Portals</h1>
+    <p>12+ bespoke B2B portals with individual pricing, powered by a single shared CMS</p>
+</div>
+</div>
+
+<div class="metrics">
+    <div class="metric">
+        <div class="metric-value">12+</div>
+        <div class="metric-label">Portals Live</div>
+    </div>
+    <div class="metric">
+        <div class="metric-value highlight">1</div>
+        <div class="metric-label">Shared CMS</div>
+    </div>
+    <div class="metric">
+        <div class="metric-value accent">Per-Client</div>
+        <div class="metric-label">Custom Pricing</div>
+    </div>
+    <div class="metric">
+        <div class="metric-value">Bespoke</div>
+        <div class="metric-label">Configurable Appearance</div>
+    </div>
+    <div class="metric">
+        <div class="metric-value">Premier</div>
+        <div class="metric-label">Partners Programme</div>
+    </div>
+</div>
+
+<div class="container">
+
+    <section class="content-section reveal">
+        <h2>The Brief</h2>
+        <p>eventhireGroup needed bespoke online portals for its highest-value B2B account customers. Each portal needed to look and feel unique to the client, display individually negotiated pricing, and be maintainable without duplicating effort across dozens of separate WordPress installations.</p>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>The Challenge</h2>
+        <p>Delivering a scalable portal system for multiple B2B clients, each with unique requirements, without creating a maintenance nightmare.</p>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Unique Branding</h3>
+                <p>Each B2B client needs their own branded portal with unique appearance, colours, and layout.</p>
+            </div>
+            <div class="card">
+                <h3>Individual Pricing</h3>
+                <p>Pricing is individually negotiated per client — every portal shows different prices for the same products.</p>
+            </div>
+            <div class="card">
+                <h3>Maintenance at Scale</h3>
+                <p>Maintaining 12+ separate WordPress installations would be unmanageable for a one-person digital team.</p>
+            </div>
+            <div class="card">
+                <h3>Rapid Onboarding</h3>
+                <p>New portals need to be spun up quickly when new account clients are onboarded.</p>
+            </div>
+            <div class="card">
+                <h3>Bespoke Client Requirements</h3>
+                <p>Every client has different needs: some require two-step login flows, others want prices hidden, some need venue-specific delivery locations. Each requires custom implementations while staying within the shared theme.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>What I Built</h2>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-bottom: 24px; border-radius: 12px; overflow: hidden; border: 1px solid var(--light-border);">
+            <div style="border-right: 1px solid var(--light-border);">
+                <img src="images/rebrand/movingvenue.clientrentalhub.com_.webp" alt="Moving Venue client portal">
+                <div style="padding: 12px 16px; background: var(--light-surface); font-size: 13px; color: var(--text-muted); text-align: center; font-weight: 600;">Moving Venue</div>
+            </div>
+            <div>
+                <img src="images/thejockeyclub.clientrentalhub.com_ (2).webp" alt="The Jockey Club client portal">
+                <div style="padding: 12px 16px; background: var(--light-surface); font-size: 13px; color: var(--text-muted); text-align: center; font-weight: 600;">The Jockey Club</div>
+            </div>
+        </div>
+        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 24px;">Two live client portals running on the same WordPress Multisite installation. Same shared product catalogue, same underlying system — but different branding, different pricing, and different business logic per site.</p>
+
+        <p>A <strong>WordPress Multisite architecture</strong> that powers 12+ bespoke client portals from a single installation:</p>
+        <ul>
+            <li>Each portal has individually configurable appearance (branding, colours, layout) while running on a shared theme</li>
+            <li>Custom pricing per portal — the same product can show different prices to different clients, with the option to hide prices entirely</li>
+            <li>Per-client custom functionality: two-step login flows, venue-specific delivery locations, bespoke checkout requirements — implemented through ACF fields, custom PHP, or theme-level changes depending on the requirement</li>
+            <li>Shared product catalogue maintained once, displayed everywhere</li>
+            <li>New portals can be created and configured rapidly, with each iteration building on the shared system without breaking existing portals</li>
+            <li>Integrated with the custom login plugin for secure, branded access</li>
+            <li>Part of the broader "Premier Partners" service alongside the AI product visualiser</li>
+        </ul>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>Architecture</h2>
+        <p>WordPress Multisite was the right choice because it allows one core installation with shared plugins, themes, and a product database, while each sub-site (portal) can have its own configuration, appearance settings, and pricing rules.</p>
+        <div class="insight">
+            <p>Product updates happen once and propagate everywhere, while each client sees their negotiated prices and branded experience. The alternative — maintaining 12+ separate sites, updating products in each one individually, and managing separate hosting for all of them — would have been unsustainable for a one-person team.</p>
+        </div>
+        <p>The real complexity is in the per-client customisations. Each portal can require different business logic, and every change has to work for that specific client without breaking the other 11+ portals sharing the same system.</p>
+
+        <h3 style="font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin: 28px 0 16px;">Shared Customisations (All Sites)</h3>
+        <p>All portals share a base layer of WooCommerce modifications that reflect how the hire business operates:</p>
+        <ul>
+            <li><strong>"Shipping" renamed to "Transport"</strong> across checkout, cart, emails, and order totals — because hire companies deliver, they don't ship</li>
+            <li><strong>"Billing details" renamed to "Order Request Details"</strong> and order confirmation language changed throughout ("order request" not "order") to reflect the enquiry-based workflow</li>
+            <li><strong>Custom quantity controls</strong> with plus/minus buttons replacing the default WooCommerce number input</li>
+            <li><strong>UK date formatting</strong> via a custom shortcode for hire start/end dates in emails</li>
+            <li><strong>Dynamic product category grid</strong> built as a custom shortcode that pulls WooCommerce categories with thumbnails into a responsive bento layout</li>
+        </ul>
+
+        <h3 style="font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin: 28px 0 16px;">Per-Site Customisations</h3>
+        <p>Individual portals then get site-specific logic layered on top, targeted by blog ID:</p>
+        <ul>
+            <li><strong>Hidden pricing for guests</strong> — some portals hide all prices until logged in, showing "Login to view price" on product pages and nothing on category pages. Cart and checkout are also blocked for guests.</li>
+            <li><strong>Site-specific order messaging</strong> — e.g. Tobacco Dock's on-hold message references the client's account manager rather than using the generic WooCommerce text</li>
+            <li><strong>Custom checkout redirects</strong> — e.g. Goodwood's portal redirects to a custom "order-request" URL slug instead of the default WooCommerce checkout path</li>
+            <li><strong>Per-client hero imagery, colour schemes, and navigation</strong> configured through the theme settings per sub-site</li>
+        </ul>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Architecture decision</h3>
+                <p>Evaluated WordPress Multisite vs. separate installations; chose Multisite for shared catalogue and centralised maintenance</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Per-client customisation</h3>
+                <p>Built bespoke features for each portal — two-step logins, hidden pricing, venue delivery locations — using ACF fields, custom PHP, and theme-level changes</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Iterative development</h3>
+                <p>Each new client requirement feeds back into the shared system, making the next portal faster to deploy while keeping existing portals stable</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Portal deployment</h3>
+                <p>Rolled out 12+ portals with individual branding, pricing rules, and secure client access</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Premier Partners integration</h3>
+                <p>Integrated portals as a core component of the Premier Partners retention service</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>Results</h2>
+        <ul>
+            <li><strong>12+ bespoke B2B portals</strong> running on a single CMS</li>
+            <li><strong>Products maintained once,</strong> prices configured per client</li>
+            <li><strong>New portals deployed rapidly</strong> for new account customers</li>
+            <li><strong>Consistent functionality</strong> across all portals with individual branding</li>
+            <li><strong>Significantly reduced maintenance overhead</strong> compared to managing separate installations</li>
+            <li><strong>Core part of "Premier Partners"</strong> retention service, contributing to high-value client retention</li>
+        </ul>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>Tools & Skills Used</h2>
+        <ul class="skills-tags">
+            <li>WordPress Multisite</li>
+            <li>WooCommerce</li>
+            <li>PHP</li>
+            <li>Advanced Custom Fields (ACF)</li>
+            <li>WooCommerce Hooks & Filters</li>
+            <li>Custom Shortcodes</li>
+            <li>Per-Site Business Logic</li>
+            <li>CSS</li>
+            <li>Technical Architecture</li>
+            <li>Technical Brief Writing</li>
+            <li>Freelancer Management</li>
+            <li>B2B Strategy</li>
+        </ul>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>What I Learned</h2>
+        <p>The key decision was choosing WordPress Multisite over separate installations. It's a trade-off: Multisite adds some complexity in how plugins and themes interact across the network, but for this use case — dozens of portals that share a product catalogue but need individual pricing and branding — it was clearly the right architecture.</p>
+        <p>The alternative would have been maintaining 12+ separate sites, updating products in each one individually, and managing separate hosting for all of them. That would have been unsustainable for a one-person team.</p>
+        <p>The most technically challenging part is the ongoing per-client customisation. Every client has different requirements — some need two-step logins, others want prices hidden, some need specific venue delivery locations with custom checkout flows. Each of these needs implementing through a mix of ACF fields, custom PHP, or theme-level changes, and every change has to work for that client without breaking the other portals sharing the same system. It's a constant balancing act between bespoke client needs and system stability.</p>
+    </section>
+
+</div>
+
+<div class="case-footer">Kyle France — Portfolio Case Study</div>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

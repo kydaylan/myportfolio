@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: WP Site Lock — Kyle France</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+    <a href="index.html" class="nav-logo">Kyle<span>.</span></a>
+    <a href="index.html" class="nav-back">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 3L5 8l5 5"/></svg>
+        Back to portfolio
+    </a>
+</nav>
+
+<div class="hero-case"><div class="hero-case-inner">
+    <span class="label">Case Study — Custom Plugin</span>
+    <h1>WP Site Lock</h1>
+    <p>A custom WordPress Multisite login plugin that replaced a &pound;330/site commercial solution — built with AI-assisted development</p>
+</div>
+</div>
+
+<div class="metrics">
+    <div class="metric">
+        <div class="metric-value highlight">&pound;3,600+/yr</div>
+        <div class="metric-label">Annual Saving</div>
+    </div>
+    <div class="metric">
+        <div class="metric-value">11+</div>
+        <div class="metric-label">Sites Deployed</div>
+    </div>
+    <div class="metric">
+        <div class="metric-value accent">&pound;330/site</div>
+        <div class="metric-label">Licence Replaced</div>
+    </div>
+    <div class="metric">
+        <div class="metric-value">1</div>
+        <div class="metric-label">Master Password</div>
+    </div>
+    <div class="metric">
+        <div class="metric-value">0</div>
+        <div class="metric-label">Ongoing Cost</div>
+    </div>
+</div>
+
+<div class="container">
+
+    <section class="content-section reveal">
+        <h2>The Brief</h2>
+        <p>eventhireGroup operates 12+ bespoke B2B client portals on WordPress Multisite. Each portal requires password protection with a clean, branded login experience. The commercial plugin handling this cost &pound;330 per site per year — &pound;3,600+ annually across the group — and it lacked features the business actually needed.</p>
+        <p>I identified the opportunity to replace it with something better and cheaper: a custom plugin built to our exact requirements.</p>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>The Challenge</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Escalating Costs</h3>
+                <p>&pound;330/year per site across 11+ sites, with costs growing every time a new client portal was added.</p>
+            </div>
+            <div class="card">
+                <h3>No Master Password</h3>
+                <p>Internal staff had to know each client's individual password to access their portal. No way to use a single credential across all sites.</p>
+            </div>
+            <div class="card">
+                <h3>Broken Sessions</h3>
+                <p>Sessions weren't persistent across the multisite network. Logging into one portal didn't carry over to others, disrupting internal workflow.</p>
+            </div>
+            <div class="card">
+                <h3>Generic Login UI</h3>
+                <p>The customer-facing login screen was a generic form that didn't match the premium, branded portal experience clients expected.</p>
+            </div>
+            <div class="card">
+                <h3>No Customisation</h3>
+                <p>No way to set per-site branding, custom logos, background colours, or login text for each client portal.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>What I Built</h2>
+        <p>A custom WordPress plugin called <strong>WP Site Lock</strong> that replaced the commercial solution entirely, with features it never had.</p>
+
+        <h3 style="font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin: 28px 0 16px;">Branded Login Screens</h3>
+        <p>Each client portal gets its own branded login page. The admin can upload a custom logo, set a background (solid colour, gradient, or image), and write custom login text per site. The login form uses a glassmorphism card design with backdrop blur, entrance animation, and a password visibility toggle.</p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 16px; border-radius: 12px; overflow: hidden; border: 1px solid var(--light-border);">
+            <div style="background: #111; padding: 0; display: flex; align-items: center; justify-content: center; border-right: 1px solid var(--light-border);">
+                <img src="images/site lock/Tobacco Dock Login.webp" alt="Tobacco Dock Food client portal login screen">
+            </div>
+            <div style="background: #1a2535; padding: 0; display: flex; align-items: center; justify-content: center;">
+                <img src="images/site lock/movingvenuelogin.webp" alt="Moving Venue client portal login screen">
+            </div>
+        </div>
+        <p style="font-size: 13px; color: var(--text-muted); margin-top: 8px;">Two live client portals: Tobacco Dock Food (left) and Moving Venue (right). Same plugin, different branding — each configured through the per-site admin panel.</p>
+
+        <h3 style="font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin: 28px 0 16px;">Network-Level Master Password</h3>
+        <p>A single master password managed at the network level that works across every portal. Internal staff use one credential to access any client site without needing to know individual passwords.</p>
+
+        <div style="margin-top: 16px; border-radius: 12px; overflow: hidden; border: 1px solid var(--light-border);">
+            <img src="images/site lock/sitelock master.webp" alt="WP Site Lock network admin - master password settings">
+        </div>
+        <p style="font-size: 13px; color: var(--text-muted); margin-top: 8px;">The network admin panel. The master password is stored at the network level and works alongside each site's own password.</p>
+
+        <h3 style="font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin: 28px 0 16px;">Per-Site Admin Panel</h3>
+        <p>Each portal has its own settings page where admins can configure the password, upload a logo via the WordPress media library, choose a background type (gradient with colour pickers and angle control, solid colour, or image upload), and set custom login page text with basic HTML support.</p>
+
+        <div style="margin-top: 16px; border-radius: 12px; overflow: hidden; border: 1px solid var(--light-border);">
+            <img src="images/site lock/sitelockadmin single site.webp" alt="WP Site Lock per-site admin panel">
+        </div>
+        <p style="font-size: 13px; color: var(--text-muted); margin-top: 8px;">The per-site admin panel for Tobacco Dock, showing password management, logo upload, gradient background controls, and custom login text.</p>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>Under the Hood</h2>
+        <p>The plugin follows WordPress coding standards and is structured as a proper multisite-aware plugin, not a quick hack. Key technical decisions:</p>
+        <ul>
+            <li><strong>HMAC-SHA256 cookie tokens</strong> derived from the stored password hash with separate salts for site and master passwords. Changing a password automatically invalidates all existing cookies without needing to track sessions.</li>
+            <li><strong>Brute-force protection</strong> with per-IP rate limiting using WordPress transients: 10 failed attempts triggers a 15-minute lockout, scoped per site.</li>
+            <li><strong>Automatic noindex/nofollow</strong> via both HTTP headers (X-Robots-Tag) and meta robots directives when a site is locked, preventing search engines from indexing protected content.</li>
+            <li><strong>Nonce verification</strong> on every form submission (login and admin), capability checks on all admin actions, and full input sanitisation/output escaping throughout.</li>
+            <li><strong>Admin bypass</strong> for logged-in users with <code style="background: var(--light-surface); padding: 2px 6px; border-radius: 4px; font-size: 14px;">manage_options</code> capability, so WordPress admins are never locked out.</li>
+            <li><strong>Clean architecture:</strong> OOP structure with separate classes for settings, network settings, protection logic, and admin UI. Frontend code only loads on the frontend; admin code only loads in the dashboard.</li>
+        </ul>
+        <div class="insight">
+            <p>The plugin is network-activated across the entire multisite installation. Each sub-site gets independent settings (password, branding, enabled/disabled), while the master password is managed once at the network level. One codebase, 12+ portals, zero per-site licence fees.</p>
+        </div>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>How It Was Built</h2>
+        <p>I wrote a detailed CLAUDE.md specification file that defined the plugin's architecture, security requirements, WordPress coding standards, and the expected file structure. This acted as the brief for Claude Code to build from.</p>
+        <p>The spec covered everything: the cookie authentication approach, the multisite settings separation, the admin UI requirements, security rules (nonces, capability checks, input sanitisation, output escaping), performance constraints (don't load admin code on the frontend), and the activation/deactivation behaviour.</p>
+        <p>From there, I used Claude Code to develop the plugin to spec, then tested and iterated across all 12+ portals until it worked correctly in every scenario: site password, master password, admin bypass, rate limiting, and branded login pages with different configurations.</p>
+        <div class="insight">
+            <p>This is how AI-assisted development works in practice. I identified the problem, designed the solution, wrote the technical specification, and directed the build. The AI wrote the code to my architecture. I tested, iterated, and deployed. The strategic thinking and the specification writing are the real skills — the code generation is the execution method.</p>
+        </div>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>Results</h2>
+        <ul>
+            <li><strong>&pound;3,600+ annual cost saving</strong> with zero ongoing licence fees</li>
+            <li><strong>One master password</strong> for internal staff across all 12+ client portals</li>
+            <li><strong>Branded login experience</strong> per client with custom logos, colours, gradients, and text</li>
+            <li><strong>Better security</strong> than the commercial plugin: HMAC tokens, rate limiting, noindex headers</li>
+            <li><strong>Single codebase</strong> network-activated across the entire WordPress Multisite installation</li>
+            <li><strong>Full business ownership</strong> of the plugin with no vendor dependency</li>
+        </ul>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>Tools & Skills Used</h2>
+        <ul class="skills-tags">
+            <li>Claude Code</li>
+            <li>WordPress</li>
+            <li>WordPress Multisite</li>
+            <li>PHP</li>
+            <li>Plugin Architecture</li>
+            <li>Technical Specification Writing</li>
+            <li>Cookie-Based Authentication</li>
+            <li>HMAC / Cryptographic Hashing</li>
+            <li>Rate Limiting</li>
+            <li>WordPress Security (Nonces, Capabilities, Sanitisation)</li>
+            <li>CSS (Glassmorphism, Animations)</li>
+            <li>Cost-Benefit Analysis</li>
+        </ul>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>What I Learned</h2>
+        <p>The cost of commercial plugins doesn't always reflect their value. A bespoke solution built in days saved thousands annually while adding features the commercial option never offered: per-site branding, a network master password, proper rate limiting, and automatic search engine blocking.</p>
+        <p>The real skill was identifying the opportunity. Recognising that the business was paying &pound;3,600/year for something that could be replaced with a better, custom solution required understanding both the technical landscape and the business cost. Writing a clear, detailed specification was what made the AI-assisted build possible — without that spec, the output wouldn't have met WordPress coding standards or handled the multisite edge cases correctly.</p>
+    </section>
+
+</div>
+
+<div class="case-footer">Kyle France — Portfolio Case Study</div>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

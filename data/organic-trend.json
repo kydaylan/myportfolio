@@ -1,0 +1,80 @@
+[
+  {
+    "month": "202503",
+    "total": 7113,
+    "organic": 4889,
+    "direct": 2145
+  },
+  {
+    "month": "202504",
+    "total": 24534,
+    "organic": 17238,
+    "direct": 7062
+  },
+  {
+    "month": "202505",
+    "total": 29396,
+    "organic": 20175,
+    "direct": 8855
+  },
+  {
+    "month": "202506",
+    "total": 60464,
+    "organic": 19361,
+    "direct": 40703
+  },
+  {
+    "month": "202507",
+    "total": 348611,
+    "organic": 19140,
+    "direct": 329014
+  },
+  {
+    "month": "202508",
+    "total": 83785,
+    "organic": 15876,
+    "direct": 67578
+  },
+  {
+    "month": "202509",
+    "total": 25747,
+    "organic": 16447,
+    "direct": 8782
+  },
+  {
+    "month": "202510",
+    "total": 26772,
+    "organic": 17350,
+    "direct": 8839
+  },
+  {
+    "month": "202511",
+    "total": 27967,
+    "organic": 15997,
+    "direct": 11536
+  },
+  {
+    "month": "202512",
+    "total": 23102,
+    "organic": 11729,
+    "direct": 11148
+  },
+  {
+    "month": "202601",
+    "total": 28587,
+    "organic": 15179,
+    "direct": 13091
+  },
+  {
+    "month": "202602",
+    "total": 23578,
+    "organic": 14283,
+    "direct": 9004
+  },
+  {
+    "month": "202603",
+    "total": 19623,
+    "organic": 11997,
+    "direct": 7328
+  }
+]

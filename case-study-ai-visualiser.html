@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: AI-Powered Product Visualiser — Kyle France</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+    <a href="index.html" class="nav-logo">Kyle<span>.</span></a>
+    <a href="index.html" class="nav-back">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 3L5 8l5 5"/></svg>
+        Back to portfolio
+    </a>
+</nav>
+
+<div class="hero-case"><div class="hero-case-inner">
+    <span class="label">Case Study — AI + Prompt Engineering</span>
+    <h1>AI Product Visualiser</h1>
+    <p>Enabling event planners to generate photorealistic venue mockups from product photos</p>
+</div>
+</div>
+
+<div class="metrics">
+    <div class="metric">
+        <div class="metric-value highlight">Live</div>
+        <div class="metric-label">Premier Partners Service</div>
+    </div>
+    <div class="metric">
+        <div class="metric-value">Minimal</div>
+        <div class="metric-label">Manual Input Required</div>
+    </div>
+    <div class="metric">
+        <div class="metric-value accent">Claude</div>
+        <div class="metric-label">+ Google AI Studio</div>
+    </div>
+    <div class="metric">
+        <div class="metric-value highlight">Auto</div>
+        <div class="metric-label">Automated Pipeline</div>
+    </div>
+    <div class="metric">
+        <div class="metric-value">Team</div>
+        <div class="metric-label">Trained to Colleagues</div>
+    </div>
+</div>
+
+<div class="container">
+
+    <section class="content-section reveal">
+        <h2>The Brief</h2>
+        <p>eventhireGroup needed a way to show event planners photorealistic table settings for products that may not be physically available or set up in venue contexts. This was needed as part of a "Premier Partners" retention service for high-value B2B account customers.</p>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>The Challenge</h2>
+        <p>Creating photorealistic product mockups for event hire is significantly harder than it sounds. AI image generation can produce impressive results, but getting it to accurately replicate specific real products — and arrange multiple products together in a believable venue setting — requires far more than a text prompt.</p>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Product Accuracy</h3>
+                <p>AI needs to reproduce exact replicas of real inventory — specific chair designs, tableware, linen colours. Generic "a table setting" is useless. Every product file has to be named and referenced individually in the prompt.</p>
+            </div>
+            <div class="card">
+                <h3>Multi-Product Composition</h3>
+                <p>A single table setting might include 6–8 different products. Getting AI to place multiple specific items in one image with correct scale, spacing, and perspective is the hardest part of the process.</p>
+            </div>
+            <div class="card">
+                <h3>Venue Context</h3>
+                <p>Products need to sit convincingly in real client venues. Sometimes that means clearing existing furniture from a venue photo with AI before placing new products in.</p>
+            </div>
+            <div class="card">
+                <h3>Every Image Is Different</h3>
+                <p>No two client requests are the same — different products, different venues, different layouts. The workflow has to adapt to each brief rather than following a fixed template.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>What I Built</h2>
+        <p>I built a web application using Claude Code and Google AI Studio (Gemini) that automates the standard workflow — uploading products, selecting venues, and generating mockups. It works well for routine requests and is simple enough for colleagues to use without me.</p>
+        <ul>
+            <li>Upload product photos directly into the application</li>
+            <li>Configure table layouts including number of seats and arrangement style</li>
+            <li>Select from pre-loaded marquee/venue backgrounds or upload custom backgrounds</li>
+            <li>JSON-based image generation pipeline for consistent, repeatable outputs</li>
+        </ul>
+        <p>But in practice, the best results come from bespoke work. Each image is different — different products, different venues, different challenges — and the approach has to adapt every time. The app handles the straightforward requests; the complex ones need hands-on prompt engineering and often post-processing in Photoshop.</p>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>The Real Workflow</h2>
+        <p>The skill behind these images isn't pressing a button. Every output requires a different approach depending on the products, the venue, and the brief. My workflow has evolved significantly over time:</p>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Prompt Engineering</h3>
+                <p>Each product file is individually named and referenced in the prompt with specific placement instructions — seat count, arrangement, which product goes where. A single image might need a prompt referencing 8+ individual files with precise layout directions.</p>
+            </div>
+            <div class="card">
+                <h3>Evolved from Text to JSON</h3>
+                <p>Started with standard text prompts written in ChatGPT for Google AI Studio. Over time, moved to structured JSON-specific prompts for more reliable, repeatable results with complex multi-product compositions.</p>
+            </div>
+            <div class="card">
+                <h3>Venue Preparation</h3>
+                <p>Client venue photos often have existing furniture that needs removing first. AI is used to clear the room before placing new products in — a multi-step process where each stage builds on the last.</p>
+            </div>
+            <div class="card">
+                <h3>Photoshop Compositing</h3>
+                <p>When AI alone can't achieve the right result, the workflow combines AI-generated elements with Photoshop compositing — placing AI products into real venue backdrops, adjusting lighting and perspective manually.</p>
+            </div>
+        </div>
+        <div class="insight">
+            <p>The images that look effortless are the ones that took the most iteration. AI is a powerful tool, but the quality comes from knowing how to direct it — and knowing when to step in manually.</p>
+        </div>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>Example Outputs</h2>
+        <p>Every image below was generated using the AI visualiser pipeline. Products are exact replicas of eventhireGroup's real inventory, placed into client venues or pre-loaded backgrounds to create photorealistic mockups for event planners.</p>
+
+        <!-- Hero image -->
+        <div class="gallery-grid single">
+            <div class="gallery-item">
+                <img src="images/rebrand/AI generated images/nat history 1.webp" alt="AI-generated mockup of banquet tables inside the Natural History Museum">
+                <div class="caption"><strong>Natural History Museum</strong> — Round banquet tables with full place settings composited into a real venue photograph</div>
+            </div>
+        </div>
+
+        <!-- 2x2 grid -->
+        <div class="gallery-grid" style="margin-top: 16px;">
+            <div class="gallery-item">
+                <img src="images/rebrand/AI generated images/WhatsApp Image 2025-10-20 at 16.28.48.webp" alt="Luxury vaulted venue with round table settings">
+                <div class="caption"><strong>Tobacco Dock, London</strong> — Round tables with warm lighting, crossback chairs</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/rebrand/AI generated images/WhatsApp Image 2025-10-20 at 16.13.03.webp" alt="Brick arched cellar venue with dining setup">
+                <div class="caption"><strong>Brick Arched Cellar</strong> — Crossback chairs and trestle tables in a character venue</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/rebrand/AI generated images/Centurion with Spaceworks furniture.webp" alt="Centurion lounge with Spaceworks furniture">
+                <div class="caption"><strong>Centurion Lounge</strong> — Spaceworks furniture placed in a real client venue</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/rebrand/AI generated images/WhatsApp Image 2025-10-24 at 11.31.39.webp" alt="Marquee with round banquet tables">
+                <div class="caption"><strong>Marquee — Formal Banquet</strong> — Round tables with chair covers in a clearspan marquee</div>
+            </div>
+        </div>
+
+        <!-- Final row -->
+        <div class="gallery-grid" style="margin-top: 16px;">
+            <div class="gallery-item">
+                <img src="images/rebrand/AI generated images/WhatsApp Image 2025-10-24 at 11.26.55.webp" alt="Marquee with poseur tables and bar stools">
+                <div class="caption"><strong>Marquee — Poseur Tables</strong> — Bar-height tables with metal stools, casual event layout</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/rebrand/AI generated images/WhatsApp Image 2025-10-20 at 16.36.07.webp" alt="Ornate domed venue with round dining tables">
+                <div class="caption"><strong>Tobacco Dock, London</strong> — Round dining tables in the grand domed hall</div>
+            </div>
+        </div>
+
+        <div class="note" style="margin-top: 20px;">
+            These are AI-generated visualisations, not photographs. Every product shown is a digital replica of real eventhireGroup inventory. The tool generates these from product uploads and venue backgrounds in minutes, not hours.
+        </div>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>How It Evolved</h2>
+        <p>This wasn't a single build — it's a workflow that has evolved over months of real client work, with each brief pushing the approach further.</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Text prompts in ChatGPT + Google AI Studio</h3>
+                <p>Initial approach — writing descriptive text prompts and feeding them into Gemini. Worked for simple single-product images but broke down with complex compositions.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Structured JSON prompts</h3>
+                <p>Moved to JSON-formatted prompts that reference individual product files by name with specific placement instructions. Far more reliable for multi-product scenes.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Multi-step generation</h3>
+                <p>Developed techniques for clearing existing furniture from venue photos before placing new products — turning a single generation into a multi-step pipeline.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Photoshop compositing layer</h3>
+                <p>Added manual compositing for images where AI alone couldn't achieve the right result — combining AI-generated elements with real venue photography.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Web app for standard requests</h3>
+                <p>Built a web application using Claude Code to automate the standard workflow — product upload, venue selection, and generation — so colleagues can handle routine requests independently.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Team training and handover</h3>
+                <p>Trained colleagues on both the app and the manual workflow, so the service doesn't depend on one person.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>Results</h2>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Deployed</h3>
+                <p>Live as part of the "Premier Partners" retention service for high-value account customers.</p>
+            </div>
+            <div class="card">
+                <h3>Team-Ready</h3>
+                <p>Colleagues trained on the workflow so it operates independently without developer involvement.</p>
+            </div>
+            <div class="card">
+                <h3>Automated</h3>
+                <p>Minimal manual input required beyond the initial product upload. The pipeline handles the rest.</p>
+            </div>
+            <div class="card">
+                <h3>Business Impact</h3>
+                <p>Contributing to client retention and higher-value partnerships through the Premier Partners service.</p>
+            </div>
+        </div>
+        <p style="margin-top: 24px;">Alongside the visualiser, I also developed a separate AI product image workflow combining AI generation with Photoshop compositing for creating catalogue-quality marketing assets.</p>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>Tools & Skills Used</h2>
+        <ul class="skills-tags">
+            <li>Google AI Studio (Gemini)</li>
+            <li>AI Image Generation</li>
+            <li>Prompt Engineering</li>
+            <li>JSON Prompt Design</li>
+            <li>Adobe Photoshop</li>
+            <li>Photo Compositing</li>
+            <li>Claude Code</li>
+            <li>Workflow Design</li>
+            <li>Technical Specification Writing</li>
+            <li>Team Training</li>
+        </ul>
+    </section>
+
+    <section class="content-section reveal">
+        <h2>What I Learned</h2>
+        <p>AI image generation is powerful but it's not magic. The gap between "a nice image" and "an accurate representation of our actual products in a real client venue" is enormous, and closing that gap is where the real skill sits.</p>
+        <p>The workflow changes from image to image. Some work first time with the right prompt. Others need the venue clearing first, then furniture placement, then Photoshop correction. Knowing which approach to take — and when to abandon one method for another — is something that only comes from doing it repeatedly.</p>
+        <p>Building the web app was valuable for standardising the routine work and getting it off my plate. But the complex, high-value client work still needs someone who understands both the AI tools and the limitations — and that's the harder skill to replicate.</p>
+    </section>
+
+</div>
+
+<div class="case-footer">Kyle France — Portfolio Case Study</div>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
