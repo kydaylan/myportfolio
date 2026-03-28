@@ -168,7 +168,7 @@ p {
     overflow: hidden;
 }
 
-/* Dot grid pattern */
+/* Dot grid pattern — sits above the bg image */
 .hero::before {
     content: '';
     position: absolute;
@@ -178,6 +178,7 @@ p {
     mask-image: radial-gradient(ellipse 60% 70% at 70% 50%, black 0%, transparent 65%);
     -webkit-mask-image: radial-gradient(ellipse 60% 70% at 70% 50%, black 0%, transparent 65%);
     pointer-events: none;
+    z-index: 2;
 }
 
 /* Gradient glow */
@@ -191,6 +192,7 @@ p {
     background: radial-gradient(circle, rgba(52,211,153,0.06) 0%, transparent 60%);
     pointer-events: none;
     animation: hero-glow 8s ease-in-out infinite alternate;
+    z-index: 2;
 }
 
 @keyframes hero-glow {
@@ -203,9 +205,9 @@ p {
     width: 100%;
     margin: 0 auto;
     position: relative;
-    z-index: 1;
+    z-index: 3;
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr;
     gap: 64px;
     align-items: end;
 }
@@ -215,19 +217,24 @@ p {
     padding-bottom: 80px;
 }
 
-/* ── HERO IMAGE ── */
-.hero-image {
-    position: relative;
-    align-self: end;
+/* ── HERO BG IMAGE ── */
+.hero-bg-image {
+    position: absolute;
+    right: max(0px, calc((100% - 1100px) / 2 - 60px));
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
 }
 
-.hero-image img {
+.hero-bg-image img {
     display: block;
-    width: 320px;
+    width: 840px;
     height: auto;
-    border-radius: 16px 16px 0 0;
-    mask-image: linear-gradient(to top, transparent 0%, black 15%);
-    -webkit-mask-image: linear-gradient(to top, transparent 0%, black 15%);
+    opacity: 0.3;
+    mask-image: linear-gradient(to top, transparent 0%, black 20%), linear-gradient(to left, black 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, black 20%), linear-gradient(to left, black 60%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;
 }
 
 .hero h1 {
