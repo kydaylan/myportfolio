@@ -228,7 +228,7 @@ p {
 
 .hero-bg-image img {
     display: block;
-    width: 840px;
+    width: 924px;
     height: auto;
     opacity: 0.3;
     mask-image: linear-gradient(to top, transparent 0%, black 20%), linear-gradient(to left, black 60%, transparent 100%);
