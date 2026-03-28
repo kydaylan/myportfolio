@@ -2,4 +2,5 @@ temporary screenshots/
 node_modules/
 .claude/
 SKILL.md
-node_modules/
+images/refrigeration-archive/*.json
+images/refrigeration-archive/*.md
