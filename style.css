@@ -230,11 +230,9 @@ p {
     display: block;
     width: 924px;
     height: auto;
-    opacity: 0.3;
-    mask-image: linear-gradient(to top, transparent 0%, black 20%), linear-gradient(to left, black 60%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to top, transparent 0%, black 20%), linear-gradient(to left, black 60%, transparent 100%);
-    mask-composite: intersect;
-    -webkit-mask-composite: source-in;
+    opacity: 0.2;
+    mask-image: linear-gradient(to left, black 50%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to left, black 50%, transparent 100%);
 }
 
 .hero h1 {
