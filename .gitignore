@@ -4,3 +4,7 @@ node_modules/
 SKILL.md
 images/refrigeration-archive/*.json
 images/refrigeration-archive/*.md
+CLAUDE.md
+batch-screenshot.mjs
+screenshot.mjs
+serve.mjs
